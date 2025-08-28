@@ -75,7 +75,7 @@ function cadastrar() {
     msgError.style.display = 'none';
 
     setTimeout(() => {
-      window.location.href = '..assets/html/signin.html'; // Ajuste conforme necessário
+      window.location.href = '../../assets/html/signin.html'; // Ajuste conforme necessário
     }, 3000);
   } else {
     msgError.style.display = 'block';
