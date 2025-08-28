@@ -4,13 +4,115 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home</title>
+  <title>ByteShop - Home</title>
+  <style>
+    /* Seu CSS base para página */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      background-color: #ffffff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    #cart-container {
+      position: relative;
+      cursor: pointer;
+    }
+    #cart-container img {
+      width: 30px;
+      height: 30px;
+    }
+    #cart-count {
+      position: absolute;
+      top: -8px;
+      right: -8px;
+      background: red;
+      color: white;
+      border-radius: 50%;
+      padding: 2px 6px;
+      font-size: 12px;
+      display: none; /* fica invisível quando zero */
+      user-select: none;
+    }
+    #btn-sair {
+      padding: 8px 16px;
+      border: none;
+      background-color: #4CAF50;
+      color: white;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    #btn-sair:hover {
+      background-color: #45a049;
+    }
+    main {
+      padding: 40px 30px;
+      flex: 1;
+    }
+    #logado {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    .produto-card {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 10px;
+      background-color: white;
+      width: 200px;
+      margin: 10px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .produto-img {
+      width: 100%;
+      height: 150px;
+      object-fit: contain;
+      margin-bottom: 10px;
+    }
+    .produtos-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+  </style>
 </head>
 <body>
-  <h1 id="logado">Olá</h1>
-  <button onclick="sair()">Sair</button>
+
+  <header>
+    <h2>ByteShop</h2>
+    <div class="header-actions">
+      <div id="cart-container" onclick="abrirCarrinho()">
+        <img src="assets/images/cart-icon.png" alt="Carrinho" />
+        <span id="cart-count">0</span>
+      </div>
+      <button id="btn-sair" onclick="sair()">Sair</button>
+    </div>
+  </header>
+
+  <main>
+    <h1 id="logado" style="display:none;">Olá</h1>
+    <section id="produtos" class="produtos-container"></section>
+  </main>
 
   <script src="assets/js/index.js"></script>
 </body>
 </html>
-
