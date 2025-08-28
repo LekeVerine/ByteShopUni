@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ByteShop - Carrinho</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      padding: 20px;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+      background: white;
+    }
+
+    th, td {
+      padding: 12px;
+      border: 1px solid #ddd;
+      text-align: center;
+    }
+
+    img {
+      width: 80px;
+      height: auto;
+    }
+
+    .btn-remove, .btn-clear {
+      background-color: #e74c3c;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-remove:hover, .btn-clear:hover {
+      background-color: #c0392b;
+    }
+
+    .btn-voltar {
+      background-color: #3498db;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      border-radius: 4px;
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 20px;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-voltar:hover {
+      background-color: #2980b9;
+    }
+
+    input[type="number"] {
+      width: 60px;
+      padding: 5px;
+      text-align: center;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+
+    #total {
+      font-weight: bold;
+      font-size: 1.2em;
+      text-align: right;
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Meu Carrinho</h1>
+  
+  <a href="../../index.html" class="btn-voltar">← Voltar para Compras</a>
+
+  <table id="tabela-carrinho">
+    <thead>
+      <tr>
+        <th>Produto</th>
+        <th>Imagem</th>
+        <th>Preço Unitário</th>
+        <th>Quantidade</th>
+        <th>Subtotal</th>
+        <th>Remover</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Itens do carrinho vão aparecer aqui via JS -->
+    </tbody>
+  </table>
+
+  <div id="total">Total: R$ 0,00</div>
+
+  <button class="btn-clear" id="btn-limpar">Limpar Carrinho</button>
+
+  <script src="../js/cart.js"></script>
+</body>
+</html>
